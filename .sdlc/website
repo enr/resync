@@ -18,13 +18,14 @@ docs_dir="${project_home}/docs"
     echo "Missing docs dir ${docs_dir}"
     exit 1
 }
+cd "$docs_dir"
 
 website_build_dir="${project_home}/build/website"
 mkdir -p "$website_build_dir"
 
-asciidoc_dir='/documents'
-cp -r "$docs_dir" "$asciidoc_dir"
-cd "$asciidoc_dir"
+# asciidoc_dir='/documents'
+# cp -r "$docs_dir" "$asciidoc_dir"
+# cd "$asciidoc_dir"
 
 # Asciidoctor attributes
 ci_ns="${REPO_OWNER}/${REPO_NAME}"
