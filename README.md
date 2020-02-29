@@ -2,7 +2,10 @@
 
 Cross platform directory synchronization.
 
-Synchronize target directory to source and write a report file (`.resync`) in both directories.
+![CI Linux Mac](https://github.com/enr/resync/workflows/CI%20Linux%20Mac/badge.svg)
+![CI Windows](https://github.com/enr/resync/workflows/CI%20Windows/badge.svg) https://enr.github.io/resync/
+
+Resync synchronize target directory to source and write a report file (`.resync`) in both directories.
 
 Under the hood, it uses `rsync` on Linux/Mac or `robocopy` or `xcopy` on Windows.
 
