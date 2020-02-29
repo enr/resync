@@ -49,8 +49,9 @@ func writeReportFile(baseDir string, line string) error {
 func execute(noop bool, executable string, executableArgs []string) error {
 	ui.Lifecyclef("%s %s", executable, strings.Join(executableArgs, " "))
 	command := &runcmd.Command{
-		Exe:  executable,
-		Args: executableArgs,
+		Exe:     executable,
+		Args:    executableArgs,
+		Logfile: fmt.Sprintf("resync-%s.log", timestamp()),
 	}
 	logFile := command.GetLogfile()
 	fmt.Println("Log file " + logFile)
