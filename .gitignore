@@ -4,3 +4,4 @@ dist/
 coverage.out
 
 testdata/.resync
+cmd/resync/*.log

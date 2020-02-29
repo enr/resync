@@ -23,6 +23,13 @@ func timestamp() string {
 	return ts
 }
 
+func logPath() string {
+	const layout = "20060102150405"
+	t := time.Now()
+	ts := t.Local().Format(layout)
+	return fmt.Sprintf("resync-%s.log", ts)
+}
+
 func openFile(resyncFile string) (file *os.File, err error) {
 	if files.Exists(resyncFile) {
 		return os.OpenFile(resyncFile, os.O_APPEND|os.O_WRONLY, 0600)
@@ -51,7 +58,7 @@ func execute(noop bool, executable string, executableArgs []string) error {
 	command := &runcmd.Command{
 		Exe:     executable,
 		Args:    executableArgs,
-		Logfile: fmt.Sprintf("resync-%s.log", timestamp()),
+		Logfile: logPath(),
 	}
 	logFile := command.GetLogfile()
 	fmt.Println("Log file " + logFile)
