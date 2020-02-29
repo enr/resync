@@ -1,0 +1,8 @@
+REPO_HOST='github.com'
+REPO_OWNER='enr'
+REPO_NAME='resync'
+DIST_DIR='dist'
+GOPROXY='off'
+
+APP_VERSION='0.1.0-dev' # APP_VERSION_AUTOLINE this line is automatically managed
+

@@ -1,0 +1,4 @@
+folders:
+    pictures:
+        local_path: /tmp/Pictures
+        external_path: Pictures

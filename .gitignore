@@ -1,0 +1,6 @@
+bin/
+pkg/
+dist/
+coverage.out
+
+testdata/.resync
