@@ -79,7 +79,6 @@ func execute(noop bool, executable string, executableArgs []string) error {
 	// exit := make(chan error, 2)
 	// go func() {
 	state, err := runningProcess.Wait()
-	fmt.Printf("%v \n", state)
 	ui.Warnf("call wait %v %v", err, state)
 	if err != nil {
 		ui.Errorf("error process %s", command)
@@ -125,18 +124,13 @@ func sourcePath(ppath string) (string, error) {
 // expects two normalized, absolute paths
 func isInside(pathUnderTest string, directory string) bool {
 	p1 := strings.TrimSpace(filepath.FromSlash(pathUnderTest))
-	fmt.Println("p1 " + p1)
 	if p1 != "" && !strings.HasSuffix(p1, string(os.PathSeparator)) {
 		p1 = p1 + string(os.PathSeparator)
 	}
-	fmt.Println("p1 " + p1)
 	p2 := strings.TrimSpace(filepath.FromSlash(directory))
-	fmt.Println("p2 " + p2)
 	if p2 != "" && !strings.HasSuffix(p2, string(os.PathSeparator)) {
 		p2 = p2 + string(os.PathSeparator)
 	}
-	fmt.Println("p2 " + p2)
-
 	if p1 == p2 {
 		return true
 	}

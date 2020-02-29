@@ -48,7 +48,7 @@ func setupCloseHandler() {
 	signal.Notify(c, os.Interrupt, syscall.SIGTERM)
 	go func() {
 		<-c
-		fmt.Printf("\n- Ctrl+C pressed in Terminal, stopping %v \n", runningProcess)
+		fmt.Printf("\nStopping %v \n", runningProcess)
 		if runningProcess != nil {
 			runningProcess.Kill()
 		}
