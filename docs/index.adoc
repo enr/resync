@@ -1,0 +1,64 @@
+= Resync
+:author: {project-authors}
+:revnumber: {project-version}
+:source-highlighter: rouge
+
+<<<
+
+
+ifeval::["{backend}" == "html5"]
+
+image::https://github.com/{ci-ns}/workflows/CI%20Linux%20Mac/badge.svg[CI Linux Mac]
+image::https://github.com/{ci-ns}/workflows/CI%20Windows/badge.svg[CI Windows]
+
+https://github.com/{ci-ns}/releases/latest[Download last artifacts] |
+ https://enr.github.io/gip/pdf/gip_manual.pdf[Pdf manual] |
+ Build revision `{ci-build-id}`
+endif::[]
+
+[[_book]]
+## Usage
+
+Cross platform directory synchronization.
+
+Synchronize target directory to source and write a report file (`.resync`) in both directories.
+
+Under the hood, it uses `rsync` on Linux/Mac or `robocopy` or `xcopy` on Windows.
+
+Run with "`--noop`" to see the actual command, but not executing it.
+
+*Configuration*
+
+Resync uses a configuration file `${HOME}/.resyncrc`:
+
+```yaml
+folders:
+    pictures:
+        local_path: ~/Pictures
+        external_path: Pictures
+    documents:
+        local_path: ~/Documents
+        external_path: Documents
+```
+
+*Usage*
+
+To synchronize a single directory:
+
+```
+resync [--noop] /path/to/source/ /path/to/target/
+```
+
+To synchronize all directories registered in configuration file `${HOME}/.resyncrc`:
+
+```
+resync to [--noop] /path/to/target
+```
+
+Using the above configuration file, this command will synchronize `~/Pictures` to
+`/path/to/target/Pictures` and `~/Documents` to `/path/to/target/Documents`.
+
+
+## License
+
+Copyright (C) 2020 {project-authors}.
