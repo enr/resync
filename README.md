@@ -3,7 +3,8 @@
 Cross platform directory synchronization.
 
 ![CI Linux Mac](https://github.com/enr/resync/workflows/CI%20Linux%20Mac/badge.svg)
-![CI Windows](https://github.com/enr/resync/workflows/CI%20Windows/badge.svg) https://enr.github.io/resync/
+![CI Windows](https://github.com/enr/resync/workflows/CI%20Windows/badge.svg) 
+[![Documentation](https://img.shields.io/badge/Website-Documentation-orange)](https://enr.github.io/resync/)
 
 Resync synchronize target directory to source and write a report file (`.resync`) in both directories.
 
