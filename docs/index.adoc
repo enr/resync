@@ -1,7 +1,7 @@
 = Resync
 :author: {project-authors}
 :revnumber: {project-version}
-:source-highlighter: rouge
+:stylesheet: style.css
 
 <<<
 
@@ -61,4 +61,5 @@ Using the above configuration file, this command will synchronize `~/Pictures` t
 
 ## License
 
-Copyright (C) 2020 {project-authors}.
+http://www.apache.org/licenses/LICENSE-2.0[Apache License 2.0] - Copyright (C) 2020-TODAY {project-authors}.
+

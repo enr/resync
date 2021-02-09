@@ -63,16 +63,12 @@ func doTo(c *cli.Context) error {
 		syncError := syncronizeDirectories(options)
 		err = writeReport(options, syncError)
 		if syncError != nil {
-			// ui.Confidentialf("Exit 1, cause: %v", syncError)
-			// os.Exit(1)
 			failed = true
 			exitCode = 1
 			additionalMessage = fmt.Sprintf("Exit 1, cause: %v", syncError)
 			break
 		}
 		if err != nil {
-			// ui.Errorf("Error writing report: %v", err)
-			// os.Exit(5)
 			failed = true
 			exitCode = 5
 			additionalMessage = fmt.Sprintf("Error writing report: %v", err)

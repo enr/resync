@@ -89,20 +89,6 @@ func execute(noop bool, executable string, executableArgs []string) error {
 		ui.Errorf("error tail stop %s", command)
 		return err
 	}
-	// 	exit <- err
-	// }()
-
-	// res := command.Run()
-	// if noop {
-	// 	ui.Lifecycle(res.Stdout().String())
-	// } else {
-	// 	ui.Confidential(res.Stdout().String())
-	// }
-	// if !res.Success() {
-	// 	ui.Errorf("error executing %s. Exit code %d Output:", command, res.ExitStatus())
-	// 	ui.Errorf(res.Stderr().String())
-	// 	return res.Error()
-	// }
 	return nil
 }
 

@@ -48,7 +48,7 @@ Using the above configuration file, this command will synchronize `~/Pictures` t
 **Apache 2.0**
 
 ```
-Copyright 2017 resync contributors
+Copyright 2017-TODAY resync contributors
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

@@ -7,7 +7,6 @@ import (
 
 // Start start a process without waiting
 func (c *Command) Start() error {
-
 	cmd, err := c.buildCmd()
 	if err != nil {
 		return err

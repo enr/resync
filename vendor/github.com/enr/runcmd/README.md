@@ -13,9 +13,13 @@ import (
     "github.com/enr/runcmd"
 )
 ```
-You can use this library in two ways.
 
-Run starts the specified command, waits for it to complete and returns a result:
+You can use this library in two ways:
+
+- Run
+- Start
+
+`Run` starts the specified command, waits for it to complete and returns a result complete of `stdout` and `stderr`:
 
 ```Go
 executable := "/usr/bin/ls"
@@ -34,7 +38,7 @@ if res.Success() {
 }
 ```
 
-Start starts the specified command but does not wait for it to complete.
+`Start` starts the specified command but does not wait for it to complete.
 
 ```Go
 executable := "/usr/local/bin/start-server"
@@ -51,6 +55,6 @@ runningProcess := command.Process
 License
 -------
 
-Mozilla Public License Version 2.0 - see LICENSE file.
+Apache 2.0 - see LICENSE file.
 
-Copyright 2015 runcmd contributors
+Copyright 2020 runcmd contributors
