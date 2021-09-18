@@ -1,8 +1,10 @@
 REPO_HOST='github.com'
 REPO_OWNER='enr'
 REPO_NAME='resync'
-DIST_DIR='dist'
-GOPROXY='off'
+SDLC_GO_VENDOR='vendor'
+SDLC_GO_BASE=
+SDLC_DIST_DIR='dist'
+SDLC_E2E_DIR='e2e'
 
 APP_VERSION='0.2.0-dev' # APP_VERSION_AUTOLINE this line is automatically managed
 

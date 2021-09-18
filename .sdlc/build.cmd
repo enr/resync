@@ -13,7 +13,6 @@ set project_dir=%cd%
 set bin_dir=%project_dir%\bin
 
 set module_name=%REPO_HOST%/%REPO_OWNER%/%REPO_NAME%
-set exe_path=bin\%REPO_NAME%.exe
 
 echo script_name   %script_name%
 echo script_path   %script_path%
@@ -29,7 +28,6 @@ IF DEFINED SDLC_GO_VENDOR (
     set GOPROXY=off
 )
 
-@echo ON
 SETLOCAL ENABLEDELAYEDEXPANSION
 for /f %%x in ('dir /AD /B /S cmd') do (
     echo --- go build cmd %%x
