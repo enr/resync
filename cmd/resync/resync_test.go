@@ -2,6 +2,8 @@ package main
 
 import (
 	"testing"
+
+	"github.com/enr/go-files/files"
 )
 
 func TestNoop(t *testing.T) {
@@ -33,8 +35,17 @@ func TestBasic(t *testing.T) {
 	if err != nil {
 		t.Errorf(`unexpected error creating temp dir: %v`, err)
 	}
-	sd, _ := normalizeDirsPath(testdataPath)
-	td, _ := normalizeDirsPath(tmp)
+	if !files.IsDir(tmp) {
+		t.Errorf(`error creating temp dir: %s`, tmp)
+	}
+	sd, err := normalizeDirsPath(testdataPath)
+	if err != nil {
+		t.Errorf(`error managing testdataPath: %v`, err)
+	}
+	td, err := normalizeDirsPath(tmp)
+	if err != nil {
+		t.Errorf(`error managing tmp: %v`, err)
+	}
 	options := syncOptions{
 		Source:    sd,
 		Target:    td,
