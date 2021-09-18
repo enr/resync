@@ -53,7 +53,3 @@ for /f %%x in ('dir /AD /B /S cmd') do (
          -o !exe_path! "%module_name%/cmd/!bin_name!"
     call go test -mod vendor -cover ./...
 )
-
-cd %project_dir%
-go test -mod vendor -v github.com/enr/runp/e2e
-
